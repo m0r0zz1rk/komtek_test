@@ -9,7 +9,7 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
 """
-    В зависимости от значения PROD в файле .env
+    В зависимости от значения START в файле .env
     выбираем нужную конфигурацию проекта
 """
 
