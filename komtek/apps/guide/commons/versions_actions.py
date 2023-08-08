@@ -24,5 +24,6 @@ class VersionsActions:
         """Получение списка ID справочников, у которых дата начала версий меньше или равна полученной"""
         guides = []
         if isinstance(date, datetime.date):
-            guides = [version.guide.object_id for version in Versions.objects.filter(date_start__lte=date)]
+            guides = [version.guide.object_id for version in Versions.objects.select_related('guide').\
+                filter(date_start__lte=date)]
         return guides
