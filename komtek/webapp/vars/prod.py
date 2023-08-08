@@ -4,6 +4,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
+CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')
+
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get('DB_ENGINE'),
