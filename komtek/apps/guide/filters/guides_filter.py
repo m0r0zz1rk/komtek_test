@@ -11,7 +11,6 @@ class GuidesFilter(filters.BaseFilterBackend):
     @staticmethod
     def filter(request, queryset):
         qs = queryset
-        du = DictUtils()
         if DictUtils.exist_key_in_dict('date', request.GET):
             get_date = DateUtils.convert_to_date(du.get_str_value_in_dict_by_key('date', request.GET))
             if get_date:
